@@ -21,17 +21,6 @@
         </p>    
     </div>
 </div>
-
-<div id="Buttons">
-    <button type="button" id="b0" onclick="changeTab('0')">Version 1.0</button>
-    <button type="button" id="b1" onclick="changeTab('1')">Version 1.1</button>
-    <button type="button" id="b2" onclick="changeTab('2')">Version 1.2</button>
-    <button type="button" id="b3" onclick="changeTab('3')">Version 1.3</button>
-    <button type="button" id="b4" onclick="changeTab('4')">Version 1.4</button>
-    <button type="button" id="bc" onclick="changeTab('c')">Coming Soon</button>
-    <button type="button" id="bm" onclick="changeTab('m')">Modded Versions</button>
-</div>
-
 <div id="0" class="tab-pane">
 <h2>Version 1.0 changes</h2>
 <ul>
@@ -99,35 +88,3 @@
     <li>Hard</li>
     <li>Hacked (Move midair!)</li>
 </ul>
-</div>
-
-
-<script>
-    var hidden = true;
-    var hiddenPane = document.getElementById("hidden");
-    var shownPane = document.getElementById("shown");
-    hiddenPane.style.display = 'block';
-    shownPane.style.display = 'none';
-    function toggleInstructions() {
-        if (hidden == true) {
-            hiddenPane.style.display = 'none';
-            shownPane.style.display = 'block';
-            hidden = false;
-        }
-        else {
-            hiddenPane.style.display = 'block';
-            shownPane.style.display = 'none';
-            hidden = true;
-        }
-    }
-    function changeTab(tabId) {
-        var tabPanes = document.getElementsByClassName("tab-pane");
-        for (var i = 0; i < tabPanes.length; i++) {
-            tabPanes[i].style.display = 'none';
-        }
-        var tabPane = document.getElementById(tabId);
-        tabPane.style.display = "block";
-
-    }
-    changeTab('hide')
-</script>
