@@ -1,27 +1,4 @@
 <!DOCTYPE html>
-<style>
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    a {
-        color: #000;
-    }
-
-    button {
-        border-style: none;
-        margin: 10px;
-        padding: 10px;
-    }
-
-    body::selection {
-        background-color: #abcdef;
-        color: #000;
-    }
-
-    button:hover {
-        background-color: #888;
-    }
-</style>
 <strong><h1>NEW UPDATE!</h1></strong>
 <h2>
     <a href="https://drive.google.com/file/d/1ue9PhXliDH5QUBB7U40OozEbHkETIQy8/view?usp=drive_link">Download executable</a><br>
