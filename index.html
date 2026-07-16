@@ -44,20 +44,20 @@
 <button type="button" id="b1" onclick="changePage('outAtDark')"><h1>Out at Dark</h1></button>
 <div id="prediction" class="page">
     <div id="Buttons">
-        <button type="button" id="b0" onclick="changePage('1.0')">Version 1.0</button>
-        <button type="button" id="b1" onclick="changePage('1.1')">Version 1.1</button>
-        <button type="button" id="b2" onclick="changePage('2.0')">Version 2.0</button>
-        <button type="button" id="b3" onclick="changePage('2.1')">Version 2.1</button>
-        <button type="button" id="b4" onclick="changePage('2.2')">Version 2.2</button>
+        <button type="button" id="b0" onclick="changeTab('1.0')">Version 1.0</button>
+        <button type="button" id="b1" onclick="changeTab('1.1')">Version 1.1</button>
+        <button type="button" id="b2" onclick="changeTab('2.0')">Version 2.0</button>
+        <button type="button" id="b3" onclick="changeTab('2.1')">Version 2.1</button>
+        <button type="button" id="b4" onclick="changeTab('2.2')">Version 2.2</button>
     </div>
-    <div id="1.0">
+    <div id="1.0" class="tab-pane">
         <h2>Version 1.0 changes</h2>
         <ul>
             <strong><li>Game created</li></strong>
             <a href="https://drive.google.com/file/d/1GKwBInRdlvxN6mHWqyRCLtTGAevcVZw2/view?usp=drive_link">Download 1.0 pck</a>
         </ul>
     </div>
-    <div id="1.1">
+    <div id="1.1" class="tab-pane">
         <h2>Version 1.1 changes</h2>
         <ul>
             <strong><li>Added level 4, but it's broken</li></strong>
@@ -66,7 +66,7 @@
         </ul>
     </div>
     
-    <div id="2.0">
+    <div id="2.0" class="tab-pane">
         <h2>Version 2.0 changes</h2>
         <ul>
             <strong><li>Fixed and changed level 4, added level 5</li></strong>
@@ -75,12 +75,20 @@
     </div>
     
     
-    <div id="2.1">
-        <h2>Version 2.0 changes</h2>
+    <div id="2.1" class="tab-pane">
+        <h2>Version 2.1 changes</h2>
         <ul>
             <strong><li>Fixed and changed level 4, added level 5</li></strong>
-            <a href="https://drive.google.com/file/d/1o16TI61eQtiKoDJprQF6NKPH19W2ESo_/view?usp=drive_link">Download 2.0 pck</a>
+            <a href="">Download 2.1 pck</a>
         </ul>
+    </div>
+    <div id="2.2" class="tab-pane">
+        <h2>Version 2.2 changes</h2>
+        <ul>
+            <li>Added full run reset (shift+r)</li>
+            <li>Added debug area (it's hidden)</li>
+        </ul>
+        <a href="">Download 2.2 pck</a>(newest)
     </div>
     
 </div>
@@ -205,8 +213,9 @@
         for (var i = 0; i < pages.length; i++) {
             pages[i].style.display = 'none';
         }
-        var tabPane = document.getElementById(tabId);
-        pages.style.display = "block";
+        var page = document.getElementById(pageId);
+        page.style.display = "block";
         
     }
+    changePage('none')
 </script>
